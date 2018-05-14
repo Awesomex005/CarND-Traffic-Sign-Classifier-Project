@@ -90,17 +90,19 @@ My final model consisted of the following layers:
 To train the model, I used an AdamOptimizer, 128 batch size, 20 epochs and learning rate at 0.001
 
 My final model results were:
-* training set accuracy of 0.862
-* validation set accuracy of 0.965   
-* test set accuracy of 0.9414885195398368
+* training set accuracy of **0.862**
+* validation set accuracy of **0.965** 
+* test set accuracy of **0.9414885195398368**
 
 Here is a visualization of test set accuracy of individual sign type.
 ![alt text][image9]
 
 The initial model
 * The first architecture I used is LeNet5 because it is simple, easy to use and understand.
+
 Problem
 * LeNet5 doing so well in fitting train set and finally overfitting on the train set.
+
 Solution
 * I add dropout layer in the last 2 full connection hidden layers. 
 Dropout randomly drop neurons, I think this is similar to trainning different models when every new batch fed in, in the end we get a combination model from many different models. 
@@ -137,6 +139,8 @@ For the first image, the model is relatively sure that this is a Speed limit (30
 | 5.21126940e-19					| Speed limit (60km/h)											|
 | 1.64775428e-21	      			| Speed limit (20km/h)					 				|
 | 6.13898473e-22				    | Speed limit (80km/h)     							|
+
+For the rest of the images, the model also did well, it gave nearly 100% probability to the right prediction.
 
 #### Visualization of network's feature maps
 Here is a visualization of conv1 feature maps with
